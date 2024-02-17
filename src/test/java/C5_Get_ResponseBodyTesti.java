@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class C05_Get_ResponseBodyTesti {
+public class C5_Get_ResponseBodyTesti {
     /*
     https://jsonplaceholder.typicode.com/posts/44 url'ine bir GET request yolladigimizda donen Response'in:
     - status code'unun 200,
@@ -14,7 +14,7 @@ public class C05_Get_ResponseBodyTesti {
     */
 
     @Test
-    public void get01() {
+    public void responseBodyTesti() {
     // Endpoint hazırlanır:
         String url = "https://jsonplaceholder.typicode.com/posts/44";
         // soruda verilmişse expected data hazırlanır. soruda ... olduğunu test edin
