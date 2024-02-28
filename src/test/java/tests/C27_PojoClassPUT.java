@@ -13,12 +13,12 @@ import static org.junit.Assert.assertEquals;
 public class C27_PojoClassPUT extends BaseUrlJsonPlaceUrl {
     /*
     https://jsonplaceholder.typicode.com/posts/70 url'ine
-    asagidaki body'e sahip bir PUT request yolladigimizda
-    donen response'in
-    status kodunun 200,
-    content type'inin "application/json; charset=utf-8",
-    Connection header degerinin "keep-alive"
-    ve response body'sinin asagida verilen ile ayni oldugunu test ediniz
+    asagidaki body'e sahip bir PUT request yolladigimizda donen response'in
+    - status kodunun 200,
+    - content type'inin "application/json; charset=utf-8",
+    - Connection header degerinin "keep-alive"
+    - response body'sinin asagida verilen ile ayni oldugunu test ediniz
+
      Request Body
         {
         "title":"Ahmet",
@@ -26,7 +26,8 @@ public class C27_PojoClassPUT extends BaseUrlJsonPlaceUrl {
         "userId":10,
         "id":70
         }
-    Response body : // expected data
+
+     Response body : // expected data
         {
         "title":"Ahmet",
         "body":"Merhaba",
@@ -55,7 +56,6 @@ public class C27_PojoClassPUT extends BaseUrlJsonPlaceUrl {
         assertEquals(JsonPlaceData.basariliSC,response.getStatusCode());
         assertEquals(JsonPlaceData.contentType,response.getContentType());
         assertEquals(JsonPlaceData.header,response.header("Connection"));
-
 
     }
 }
